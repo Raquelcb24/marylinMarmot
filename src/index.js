@@ -11,7 +11,7 @@ server.use(express.json({limit: '25mb'}));
 const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 async function conexion() {
@@ -28,6 +28,10 @@ async function conexion() {
 
 /*  conexion(); */
 
+server.get('/', (req, res) => {
+    console.log('Request received at /');
+    res.send('API is running');
+});
 
 server.get('/jewels', async (req, res) => {
   try {
