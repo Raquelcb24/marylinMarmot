@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
     "deploy": "cd front && npm run build && cd .. && rm -rf ./src/public-react && mv ./front/dist ./src/public-react",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build": "[my-framework] build --output public"
   },
   "author": "",
   "license": "ISC",
