@@ -22,7 +22,7 @@ function Context({children}) {
           
             // Agrupar las joyas por colección
             const groupedJewels = data.results.reduce((acc, jewel) => {
-                const { collection_id, collection_title, jewel_id, jewel_title, jewel_price, jewel_image, jewel_category } = jewel;
+                const { collection_id, collection_title, jewel_id, jewel_title, jewel_price, jewel_image, jewel_category, jewel_description } = jewel;
                 if (!acc[collection_id]) {
                     acc[collection_id] = {
                         title: collection_title,
@@ -34,7 +34,8 @@ function Context({children}) {
                     title: jewel_title,
                     price: jewel_price,
                     image: jewel_image,
-                    category: jewel_category || 'unknown'
+                    category: jewel_category || 'unknown',
+                    description: jewel_description
                 });
                 return acc;
             }, {});

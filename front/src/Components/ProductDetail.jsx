@@ -5,7 +5,7 @@ import { XMarkIcon } from '@heroicons/react/24/solid';
 
 function ProductDetail() {
     const context = useContext(ShoppingCardContext);
-    console.log(context.productToShow);
+    console.log('product to show: ', context.productToShow);
   return (
     <aside className=  {` productDetail ${context.isProductDetailOpen ? 'flex' : 'hidden'}  flex flex-col fixed right-0 bottom-0 border border-black rounded-lg bg-white mt-0 items-center`}>
         <div className='flex justify-between  p-6'>
@@ -15,10 +15,11 @@ function ProductDetail() {
             </div>
         
         <figure className='px-6 flex justify-center items-center '>
-            <img className="w-full h-60 rounded-lg" src={context.productToShow.image} alt={context.productToShow.title} />
+            <img className="w-full h-52 rounded-lg" src={context.productToShow.image} alt={context.productToShow.title} />
         </figure>
         <p className='flex flex-col p-4 items-center'>
             <span className="text-sm font-light 2xl:text-2xl">{context.productToShow.title}</span>
+            <span className="text-xs font-light 2xl:text-2xl">{context.productToShow.description}</span>
             <span className="text-sm font-medium mb-1 2xl:text-2xl">{context.productToShow.price}€</span>
         </p>
     </aside>

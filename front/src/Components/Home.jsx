@@ -109,6 +109,7 @@ function Home() {
                 price={jewel.price}
                 image={jewel.image}
                 category="Filtrado"
+                description={jewel.description}
               />
             ))
           ) : (
@@ -123,7 +124,7 @@ function Home() {
               <div 
                onClick={() => handleCollapsable(collectionId)}
                className={`w-60 md:w-80 lg:w-96 collapsable__content ${openCollections[collectionId] ? 'collapsable__content--open' : ''}`}>
-                <h2 className="flex flex-col items-center  text-gray-800 font-bold text-lg mb-4">{jewels[collectionId].title}</h2>
+                <h2 className="flex flex-col items-center  text-gray-800 font-bold text-lg">{jewels[collectionId].title}</h2>
                 <ChevronDownIcon className={`w-6 h-6 text-black-500 collapsable__content--ico ${openCollections[collectionId] ? 'collapsable__content--open' : ''}`} />
               </div>
             </div>
@@ -137,6 +138,7 @@ function Home() {
                   price={jewel.price}
                   image={jewel.image}
                   category={jewels[collectionId].title}
+                  description={jewel.description}
                 />
               ))}
             </div>

@@ -11,7 +11,7 @@ function Footer() {
     const activeStyle = 'underline underline-offset-4';
   return (
     <Layout>
-        <footer className="w-full border-t flex flex-col items-center p-6 font-light lg:p-20 lg:text-xl">
+        <footer className="w-full border-t h-auto flex flex-col items-center p-6 font-light lg:p-20 lg:text-xl">
            
                 <span >
                     <NavLink 

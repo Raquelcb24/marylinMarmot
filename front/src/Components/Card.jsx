@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ShoppingCardContext } from "./Context";
 
 
-function Card({ id, title, price, image, category }) {
+function Card({ id, title, price, image, category, description }) {
   const context = useContext(ShoppingCardContext); //quiero que leas el estado global
   
   const showProduct = (productDetail) => { //funcion para mostrar el detalle del producto
@@ -15,7 +15,8 @@ function Card({ id, title, price, image, category }) {
     title,
     price,
     image,
-    category
+    category, 
+    description
   };
 
   const addProductToCart = (event, productDetail) => { //funcion para agregar el producto al carrito

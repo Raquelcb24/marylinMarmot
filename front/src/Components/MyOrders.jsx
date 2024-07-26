@@ -11,7 +11,7 @@ function MyOrders() {
 
   return (
     <Layout>
-      <div className='flex items-center justify-center w-80 relative mb-4 mt-6'>
+      <div className='flex items-center justify-center w-80 relative mb-4 mt-40'>
           <h1 className='font-medium text-xl'>Mis pedidos</h1>
       </div>
       
