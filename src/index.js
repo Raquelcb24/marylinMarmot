@@ -16,7 +16,7 @@ const corsOptions = {
 // Aplicar el middleware de CORS con las opciones definidas
 server.use(cors(corsOptions));
 
-const PORT = 4000;
+const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
@@ -25,10 +25,10 @@ server.listen(PORT, () => {
 async function conexion() {
     try {
         const conex = await mysql.createConnection({
-            host: "localhost",
-            user: "root",
-            password: "AdalabPass22!**",
-            database: "marylinMarmot"
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            database: process.env.DB_NAME
         });
         console.log('Conexion con la BD ' + conex.threadId);
         return conex;
